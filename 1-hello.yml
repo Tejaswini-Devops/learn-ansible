@@ -1,0 +1,13 @@
+- name: Say Hello
+  hosts: All
+  tasks:
+    - name: say hello
+      ansible.builtin.debug:
+        msg: Say hello to everyone
+
+- name: Say Bye
+  hosts: All
+  tasks:
+    - name: say bye
+      ansible.builtin.debug:
+        msg: Say bye to everyone
