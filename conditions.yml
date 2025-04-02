@@ -1,0 +1,12 @@
+- name: Demo on Condition
+  hosts: localhost
+  tasks:
+    - name: Say hi to John
+      ansible.builtin.debug:
+        msg: Hey, John
+      when: user == "John"
+
+    - name: Say hi to Ram
+      ansible.builtin.debug:
+        msg: Hey, Ram
+      when: user == "Ram"
