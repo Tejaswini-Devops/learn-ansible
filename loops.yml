@@ -1,10 +1,15 @@
 - name: Loops
   hosts: localhost
   tasks:
-    - name: loop Demo
+    - name: loop Demo on maps
       ansible.builtin.debug:
         msg: Hey, {{ item.name }} and my age is {{ item.age }}
       loop:
         { name: "ram" , age: 20 }
         { name: "rahim" , age: 30 }
         { name: "raju" , age: 40 }
+
+#       instead of map u can give list also
+#        - ram
+#        - raju
+#        - rahim
