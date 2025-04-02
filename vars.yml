@@ -16,3 +16,9 @@
 
   roles:
     - demo
+
+# When the value is starting with variable we need to use quotes
+#   ansible.builtin.debug:
+#    msg: URL = {{ URL }} # this value is not starting with variable so we are not using quotes
+#   ansible.builtin.debug:
+#    msg: {{ URL }} # this value is starting with variable so we are not using quotes
