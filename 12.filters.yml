@@ -3,7 +3,7 @@
   tasks:
     - name: convert string to uppercase
       ansible.builtin.debug:
-      msg: "{{ 'ansible' | upper }}"   # Output: ANSIBLE
+       msg: "{{ 'ansible' | upper }}"   # Output: ANSIBLE
 
 
 
