@@ -21,3 +21,17 @@
         msg: "File does not exist!"
       when: file_check.rc != 0
 
+
+
+
+- name: Register example2
+  hosts: localhost
+  tasks:
+    - name: shell
+      ansible.builtin.debug: uptime
+      register: out
+
+    - name: Print shell output
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+#        msg: "{{ out.stdout}}" // only particular word
