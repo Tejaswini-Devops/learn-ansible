@@ -3,5 +3,7 @@
   tasks:
     - name: copy the file
       ansible.builtin.template:
+        state: touch
         src: sample.txt
         dest: /tmp/sample.txt
+        remote_src: true
