@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: copy the file
-      ansible.builtin.copy:
+      ansible.builtin.template:
         src: hello.txt
         dest: /tmp/hello.txt
         remote_src: yes
