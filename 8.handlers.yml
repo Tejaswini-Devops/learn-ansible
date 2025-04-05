@@ -5,6 +5,7 @@
       ansible.builtin.template:
         src: teju.txt
         dest: /tmp/teju.txt
+        remote_src: yes
 
     - name: say hello again
       ansible.builtin.debug:
