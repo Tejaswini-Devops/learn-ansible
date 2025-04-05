@@ -6,6 +6,7 @@
         src: hello.txt
         dest: /tmp/hello.txt
         remote_src: yes
+      notify: say hello again
 
     - name: say hello again
       ansible.builtin.debug:
