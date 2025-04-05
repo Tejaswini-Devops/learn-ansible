@@ -1,0 +1,10 @@
+- name: Gather specific Ansible facts using filter
+  hosts: all
+  tasks:
+    - name: Gather only networking-related facts
+      ansible.builtin.setup:
+        filter: "ansible_default_ipv4"
+
+    - name: Display the IP Address
+      debug:
+        var: ansible_default_ipv4.address
