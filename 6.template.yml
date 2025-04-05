@@ -3,6 +3,6 @@
   tasks:
     - name: copy the file
       ansible.builtin.copy:
-        src: sample.txt
-        dest: /tmp/sample.txt
+        src: hello.txt
+        dest: /tmp/hello.txt
         remote_src: yes
