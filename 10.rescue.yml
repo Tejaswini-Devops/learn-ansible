@@ -1,12 +1,65 @@
-- name: Demo of ignore
+- name: Try-Rescue Example
   hosts: localhost
-  block:
   tasks:
-    - name: Run the shell command
-      ansible.builtin.shell: exit 1
-      ignore_errors: true
 
-  rescue:
-    - name: Say Hi
-      ansible.builtin.debug:
-        msg: hai
+    - name: This block tries to install a fake package and handles failure
+      block:
+        - name: Run the shell command
+          ansible.builtin.shell: exit 1
+
+      rescue:
+        - name: Handle the failure
+          ansible.builtin.debug:
+            msg: "Installation failed, handling the error gracefully."
+
+      always:
+        - name: Always run this task no matter what
+          ansible.builtin.debug:
+            msg: "This runs regardless of success or failure."
+
+#  block → Tries to run the main task.
+#
+#  rescue → Runs if the task in block fails.
+#
+#  always → Runs no matter what (like cleanup or logging).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#- name: Demo of ignore
+#  hosts: localhost
+#  block:
+#  tasks:
+#    - name: Run the shell command
+#      ansible.builtin.shell: exit 1
+#      ignore_errors: true
+#
+#  rescue:
+#    - name: Say Hi
+#      ansible.builtin.debug:
+#        msg: hai
