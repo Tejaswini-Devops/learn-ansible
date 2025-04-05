@@ -1,4 +1,9 @@
-- name: Convert string to uppercase
-  debug:
-    msg: "{{ 'ansible' | upper }}"   # Output: ANSIBLE
+- name: filter demo
+  hosts: localhost
+  tasks:
+    - name: convert string to uppercase
+      ansible.builtin.debug:
+      msg: "{{ 'ansible' | upper }}"   # Output: ANSIBLE
+
+
 
