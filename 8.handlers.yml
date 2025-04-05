@@ -3,8 +3,8 @@
   tasks:
     - name: copy sample
       ansible.builtin.template:
-        src: teju.txt
-        dest: /tmp/teju.txt
+        src: hello.txt
+        dest: /tmp/hello.txt
         remote_src: yes
 
     - name: say hello again
