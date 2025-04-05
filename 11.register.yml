@@ -1,25 +1,25 @@
-- name: Register example
-  hosts: localhost
-  tasks:
-
-    - name: Check if a file exists
-      ansible.builtin.command: ls /tmp/sample.txt
-      register: file_check
-      ignore_errors: true
-
-    - name: Print the registered output
-      ansible.builtin.debug:
-        var: file_check
-
-    - name: Conditional Task Based on File Check
-      ansible.builtin.debug:
-        msg: "File exists!"
-      when: file_check.rc == 0
-
-    - name: Another Conditional Task
-      ansible.builtin.debug:
-        msg: "File does not exist!"
-      when: file_check.rc != 0
+#- name: Register example
+#  hosts: localhost
+#  tasks:
+#
+#    - name: Check if a file exists
+#      ansible.builtin.command: ls /tmp/sample.txt
+#      register: file_check
+#      ignore_errors: true
+#
+#    - name: Print the registered output
+#      ansible.builtin.debug:
+#        var: file_check
+#
+#    - name: Conditional Task Based on File Check
+#      ansible.builtin.debug:
+#        msg: "File exists!"
+#      when: file_check.rc == 0
+#
+#    - name: Another Conditional Task
+#      ansible.builtin.debug:
+#        msg: "File does not exist!"
+#      when: file_check.rc != 0
 
 
 
