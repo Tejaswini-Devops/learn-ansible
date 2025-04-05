@@ -27,6 +27,7 @@
 - name: Register example2
   hosts: localhost
   tasks:
+
     - name: shell
       ansible.builtin.debug: uptime
       register: out
