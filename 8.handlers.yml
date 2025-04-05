@@ -9,7 +9,11 @@
 
     - name: say hello again
       ansible.builtin.debug:
-        msg: hello {{ name }} again.
+        msg: hello {{ item.name }} my age is {{ item.age }}
+        loop:
+          - { name: "ram" , age: 20 }
+          - { name: "rahim" , age: 30 }
+          - { name: "raju" , age: 40 }
 
 
 
