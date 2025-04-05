@@ -28,7 +28,7 @@
   hosts: localhost
   tasks:
 
-    - name: shell
+    - name: print the shell
       ansible.builtin.debug: uptime
       register: out
 
